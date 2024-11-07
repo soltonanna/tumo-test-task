@@ -22,7 +22,7 @@ function compilerSass ()
 function jsMin()
 {
     return src([
-      './scripts/*.js',
+      './js/*.js',
       './scripts/main.js'
     ])
       .pipe(terser())

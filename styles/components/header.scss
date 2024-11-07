@@ -1,3 +1,7 @@
 header {
+    @include displayFlex(row, nowrap, center, space-between, center);
 
+    .logo {
+
+    }
 }

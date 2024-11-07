@@ -1,3 +1,15 @@
-footer {
-    
+.footer {
+    @include displayFlex(column, nowrap, center, space-between, center);
+
+    & > div {
+        width: 100%;
+    }
+
+    &__top {
+        @include displayFlex(row, nowrap, center, space-between, center);
+    }
+
+    &__bottom {
+        text-align: center;
+    }
 }

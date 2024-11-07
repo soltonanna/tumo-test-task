@@ -17,12 +17,11 @@
     <body <?php body_class(); ?>>
 <?php } ?>
 
-<div id="overlay"></div>
-
-<div id="page" class="big-container">
+<div class="big-container">
 	
-	<header id="header">
-
+	<header id="header" class="container header">
+        <div class="logo">LOGO HERE</div>
+        <nav>NAVIGATION HERE</nav>
     </header>
 
     <main id="content">

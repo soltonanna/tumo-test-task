@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif; 
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.big-container {
+    max-width: $container_big_sz;
+    min-width: $container_big_sz;
+    margin: auto;
+    border: 1px dotted rgb(255, 89, 0);
+}
+
+.container {
+    width: 80vw;
+    max-width: $container_sz;
+    min-width: $container_sz;
+    margin: auto;
+    border: 1px solid rgb(34, 123, 13);
+
+    // 1440px
+    @include respond(tab-land) { 
+        //border: 1px dotted green;
+        width: 100vw;
+        max-width: 100vw;
+        min-width: 100vw;
+        padding: 0 100px;
+    }
+
+    // 769px
+    @include respond(tab-port) { 
+        //border: 1px dotted red;
+        padding: 0 40px;
+    }
+
+    // 376px
+    @include respond(phone) { 
+        //border: 1px dotted blue;
+        padding: 0 20px;
+    } 
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    padding: 10px 35px;
+}
