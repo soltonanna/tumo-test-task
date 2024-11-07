@@ -1,0 +1,10 @@
+@import "defaults/variables";
+@import "defaults/mixins";
+@import "defaults/typography";
+@import "defaults/defaults";
+
+@import "components/header";
+@import "components/footer";
+@import 'components/menu';
+
+@import 'pages/homepage';
