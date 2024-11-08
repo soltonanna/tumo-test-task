@@ -6,6 +6,7 @@ if ( ! defined( 'URL' ) ) {
 require_once 'inc/styles-scripts.php';
 
 
+
 function tumo_custom_theme_setup() {
     /*
     * Enable support for Post Thumbnails on posts and pages.
@@ -34,6 +35,21 @@ function tumo_custom_theme_setup() {
     );
 }
 add_action( 'after_setup_theme', 'tumo_custom_theme_setup' );
+
+
+function custom_theme_widgets_init() {
+    register_sidebar( array(
+        'name'          => 'Sidebar',
+        'id'            => 'sidebar-1',
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+}
+add_action( 'widgets_init', 'custom_theme_widgets_init' );
+
+
 
 
 function tumo_customize_register($wp_customize) {
@@ -125,7 +141,6 @@ function tumo_customize_register($wp_customize) {
             'settings' => 'buttons_text_color',
         )));
 }
-
 add_action('customize_register', 'tumo_customize_register');
 
 

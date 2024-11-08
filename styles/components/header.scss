@@ -1,6 +1,6 @@
 header#header {
     @include displayFlex(row, nowrap, center, space-between, center);
-    margin-bottom: 100px;
+    margin: 60px auto 100px;
 
     .logo {
         width: 162px;

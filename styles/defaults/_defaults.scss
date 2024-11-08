@@ -26,8 +26,7 @@ a {
     max-width: $container_big_sz;
     min-width: $container_big_sz;
     margin: auto;
-    border: 1px dotted rgb(255, 89, 0);
-    background-color: $secondary-light-color;
+    //border: 1px dotted rgb(255, 89, 0);
 }
 
 .container {
@@ -35,8 +34,8 @@ a {
     max-width: $container_sz;
     min-width: $container_sz;
     margin: auto;
-    padding: 60px 66px;
-    border: 1px solid rgb(34, 123, 13);
+    padding: 0 66px;
+    //border: 1px solid rgb(34, 123, 13);
     background-color: $white-color;
 
     // 769px

@@ -4,10 +4,11 @@
 font-family: 'Poppins', sans-serif; 
 */
 
-h1 {
+h1,
+.font_h1 {
     font-size: clamp(1.5625rem, 1.3235rem + 0.9804vw, 2.5rem);
     // font-size: 40px; // phone: 25
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -15,7 +16,7 @@ h2,
 .font_h2 {
     font-size: clamp(1.25rem, 1.1863rem + 0.2614vw, 1.5rem);
     // font-size: 24px; // phone: 20
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
 }
 
@@ -23,19 +24,17 @@ h3,
 .font_h3 {
     font-size: clamp(1.125rem, 1.0931rem + 0.1307vw, 1.25rem);
     // font-size: 20px; // phone: 18
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
 }
 
 p {
-    font-size: clamp(1rem, 1rem + 0vw, 1rem);
-    // font-size: 16px; // phone: 16
-    font-weight: 500; 
+    font-size: 16px;
+    font-weight: 400; 
 }
 
 span {
-    font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-    // font-size: 14px; // phone: 14
+    font-size: 14px;
     font-weight: 400; 
 }
 

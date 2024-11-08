@@ -1,8 +1,12 @@
 .footer {
-    @include displayFlex(column, nowrap, center, space-between, center);
     background-color: $footer-bg-color;
-    padding: 30px 86px;
-    margin-top: 100px;
+    
+    .container {
+        @include displayFlex(column, nowrap, space-between, space-between, stretch);
+        background-color: $footer-bg-color;
+        padding: 30px 86px;
+        margin-top: 100px;
+    }
 
     & > div {
         width: 100%;
