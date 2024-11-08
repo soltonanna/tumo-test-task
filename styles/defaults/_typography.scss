@@ -11,14 +11,16 @@ h1 {
     font-style: normal;
 }
 
-h2 {
+h2,
+.font_h2 {
     font-size: clamp(1.25rem, 1.1863rem + 0.2614vw, 1.5rem);
     // font-size: 24px; // phone: 20
     font-weight: 700;
     font-style: normal;
 }
 
-h3 {
+h3,
+.font_h3 {
     font-size: clamp(1.125rem, 1.0931rem + 0.1307vw, 1.25rem);
     // font-size: 20px; // phone: 18
     font-weight: 700;

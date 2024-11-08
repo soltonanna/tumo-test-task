@@ -20,8 +20,24 @@
 <div class="big-container">
 	
 	<header id="header" class="container header">
-        <div class="logo">LOGO HERE</div>
-        <nav>NAVIGATION HERE</nav>
+        <div class="logo">
+            <?php 
+            if ( function_exists( 'the_custom_logo' ) ) {
+                the_custom_logo();
+            } else {
+                echo '<h1>' . get_bloginfo( 'name' ) . '</h1>';
+            } ?>
+        </div>
+
+         <nav class="primary-top-menu">
+            <?php
+            wp_nav_menu( array(
+                'theme_location'  => 'top-menu',
+                'container_class' => 'menu-items',
+                'menu_class' => 'top-menu'
+            ) );
+            ?>
+        </nav>
     </header>
 
     <main id="content">

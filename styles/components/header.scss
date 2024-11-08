@@ -1,7 +1,9 @@
-header {
+header#header {
     @include displayFlex(row, nowrap, center, space-between, center);
+    margin-bottom: 100px;
 
     .logo {
-
+        width: 162px;
+        height: 68px;
     }
 }
