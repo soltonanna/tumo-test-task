@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="container">
+	<div class="single-page">
 
 		<?php while ( have_posts() ): the_post(); ?>
 		

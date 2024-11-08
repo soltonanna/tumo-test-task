@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="container front-page">
+<div class="front-page">
     <h1>homepage - here</h1>
 </div>
 
