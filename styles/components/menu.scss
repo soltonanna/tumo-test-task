@@ -5,15 +5,17 @@ nav {
             gap: 25px;
 
             li {
-                a {
-                    color: $black-color;
-                    transition: all 0.5s ease;
-
-                    &:hover {
-                        color: $primary-color;
+                &:not(.btn) {
+                    a {
+                        color: $black-color;
+                        transition: all 0.5s ease;
+    
+                        &:hover {
+                            color: $primary-color;
+                        }
                     }
                 }
-
+            
                 &.btn {
                     margin-left: 5px;
                 }

@@ -24,9 +24,8 @@
                 li {
                     width: 45px;
                     height: 45px;
-                    border: 1px solid $primary-color;
-                    background-color: $primary-color;
                     border-radius: 50%;
+                    transition: all 0.5s ease;
                 
                     a {
                         display: block;
@@ -50,6 +49,10 @@
                         a {
                             background-image: url('../../images/icon_linkedin.svg');
                         }
+                    }
+
+                    &:hover {
+                        box-shadow: 3px 3px 5px $secondary-color;
                     }
                 }
             }

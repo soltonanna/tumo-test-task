@@ -58,13 +58,10 @@ img {
 
 .btn {
     padding: 10px 35px;
-    color: $black-color;
-    background-color: $primary-color;
-    border: 2px solid $primary-color;
     transition: all 0.5s ease;
 
-    &:hover {
-        background-color: $white-color;
-        color: $black-color;
-    }
+    // &:hover {
+    //     background-color: $white-color;
+    //     color: $black-color;
+    // }
 }
