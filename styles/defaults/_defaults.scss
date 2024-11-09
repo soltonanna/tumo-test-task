@@ -26,7 +26,6 @@ a {
     max-width: $container_big_sz;
     min-width: $container_big_sz;
     margin: auto;
-    //border: 1px dotted rgb(255, 89, 0);
 }
 
 .container {
@@ -35,7 +34,6 @@ a {
     min-width: $container_sz;
     margin: auto;
     padding: 0 66px;
-    //border: 1px solid rgb(34, 123, 13);
     background-color: $white-color;
 
     // 769px
@@ -58,9 +56,17 @@ img {
 .btn {
     padding: 10px 35px;
     transition: all 0.5s ease;
+}
 
-    // &:hover {
-    //     background-color: $white-color;
-    //     color: $black-color;
-    // }
+.homepage-books-list {
+    text-align: center;
+
+    .pagination {
+        display: none;
+    }
+
+    .read-more-button {
+        margin: 0 auto;
+        box-shadow: 0 7px 15px rgb(207 207 207 / 80%);
+    }
 }

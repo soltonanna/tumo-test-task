@@ -11,7 +11,9 @@ if (!empty($book_shortcode)) : ?>
         <?php echo do_shortcode($book_shortcode); ?>
         
         <?php if (!empty($read_more_url)) : ?>
-            <a href="<?php echo esc_url($read_more_url); ?>" class="read-more-button">Read More</a>
+            <a href="<?php echo esc_url($read_more_url); ?>" class="btn read-more-button">
+                More Books
+            </a>
         <?php endif; ?>
     </section>
 <?php endif; ?>

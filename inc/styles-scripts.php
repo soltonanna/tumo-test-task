@@ -25,7 +25,12 @@ function register_theme_assets() {
         } 
         .secondary-text-color {
             color: " . esc_attr(get_theme_mod('secondary_color', '#BCBCBC')) . ";
-        }               
+        }
+        .text-color,
+        p, span,
+        a {
+            color: " . esc_attr(get_theme_mod('text_color', '#262626')) . ";
+        }        
     ";
 
     // Register styles

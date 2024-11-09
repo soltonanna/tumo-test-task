@@ -4,7 +4,7 @@
 
     <?php get_template_part('sections/section', 'latest-post'); ?>  
 
-    <?php get_template_part('sections/section', 'posts-list'); ?>
+    <?php get_template_part('sections/section', 'recent-posts'); ?>
 
     <?php get_template_part('sections/section', 'books-list'); ?>
 </div>
