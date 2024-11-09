@@ -6,10 +6,11 @@
 @import "components/header";
 @import "components/footer";
 @import 'components/menu';
-
+@import 'components/pagination';
 
 @import 'sections/latest-post';
 @import 'sections/recent-posts';
 
 
 @import 'pages/blog';
+@import 'pages/single-page';

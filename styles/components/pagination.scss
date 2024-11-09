@@ -1,0 +1,57 @@
+.theme-pagination {
+    @include displayFlex(row, nowrap, center, space-between, center);
+    gap: 15px;
+    width: max-content;
+    margin: 0 auto;
+
+    .page-numbers {
+        padding: 5.5px 14.5px;
+        border-radius: 5px;
+        font-weight: 400;
+        min-width: 35px;
+        min-height: 35px;
+        line-height: 22px;
+
+        &:not(.next,.prev) {
+            border: 1px solid $secondary-color;
+        }
+
+        &.current {
+            font-weight: 600;
+        }
+
+        &.next, 
+        &.prev {
+            span {
+                display: block;
+                position: relative;
+                width: 12px;
+                height: 18px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: url('../../images/arrow-black.svg') no-repeat center;
+                    background-size: contain;
+                    z-index: -1; 
+                }
+            }
+            
+        }
+        &.next {
+            span {
+                transform: rotate(180deg);
+            }
+            
+        }  
+        &.prev {
+            span {
+                transform: rotate(0deg);
+            }
+        }      
+    }
+}

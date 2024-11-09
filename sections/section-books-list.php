@@ -2,9 +2,10 @@
 /****
  * Get the shortcode and the "Read More" URL from the 'WP Admin / Appearance / Customize' settings
 */
+
 $book_shortcode = get_theme_mod('homepage_book_shortcode', '[book_list]');
+//$book_shortcode = '[book_list posts_per_page="' . get_theme_mod('homepage_books_per_page', 4) . '"]';
 $read_more_url = get_theme_mod('homepage_books_read_more_url', '#');
-$book_shortcode = '[book_list posts_per_page="' . get_theme_mod('homepage_books_per_page', 4) . '"]';
 
 if (!empty($book_shortcode)) : ?>
     <section class="homepage-books-list">

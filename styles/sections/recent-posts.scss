@@ -6,25 +6,25 @@
         gap: 24px;
         width: 100%;
         margin-top: 49px;
+    }
+}
 
-        .post-item {
-            a {
-                * {
-                    text-align: left;
-                }
+.post-item {
+    a {
+        * {
+            text-align: left;
+        }
 
-                img {
-                    margin-bottom: 20px;
-                    height: 254px;
-                    object-fit: cover;
-                }
-                .post-date {
-                    margin-bottom: 15px;
-                }
-                .post-title {
+        img {
+            margin-bottom: 20px;
+            height: 254px;
+            object-fit: cover;
+        }
+        .post-date {
+            margin-bottom: 15px;
+        }
+        .post-title {
 
-                }
-            }
         }
     }
 }

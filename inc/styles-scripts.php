@@ -26,11 +26,28 @@ function register_theme_assets() {
         .secondary-text-color {
             color: " . esc_attr(get_theme_mod('secondary_color', '#BCBCBC')) . ";
         }
+
         .text-color,
-        p, span,
-        a {
+        p, span, a {
             color: " . esc_attr(get_theme_mod('text_color', '#262626')) . ";
-        }        
+        }
+
+        .content-wrp a:hover,
+        .single-page .post-navigation > div:before {
+            color: " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
+        }
+
+        .theme-pagination .page-numbers {
+            color: " . esc_attr(get_theme_mod('text_color', '#262626')) . ";
+        }  
+        .theme-pagination .page-numbers.current {
+            border: 2px solid " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
+            background-color: " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
+        }  
+        .theme-pagination .page-numbers:not(.next, .prev, .current) {
+            border: 1px solid " . esc_attr(get_theme_mod('secondary_color', '#4CE0D7')) . ";
+        }   
+
     ";
 
     // Register styles

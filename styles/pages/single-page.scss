@@ -1,0 +1,177 @@
+.single-post-page {
+    @include displayGrid(2.2fr 1fr, 1fr, start, start, start, start);
+    gap: 24px;
+    width: 100%;
+
+    .content-wrap.left-part {
+        .top-meta-info {
+            @include displayFlex(row, nowrap, flex-start, flex-start, flex-start);
+            gap: 15px;
+            margin-bottom: 29px;
+        }
+        .article-title {
+            text-align: left;
+            margin-bottom: 29px;
+            width: 90%;
+        }
+
+        .post-thumbnail {
+            margin-bottom: 70px;
+            height: 538px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .content-wrp {
+            border-bottom: 1px solid $secondary-light-color;
+            padding-bottom: 70px;
+            margin-bottom: 70px;
+
+            * {
+                text-align: left;
+            }
+            h1, h2, h3, h4 {
+                margin-bottom: 19px;
+            }
+            p {
+                &:not(:last-child) {
+                    margin-bottom: 35px;
+                }
+            }
+            strong {
+                font-weight: 600;
+            }
+            ul, ol {
+                list-style: inherit;
+
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        .post-navigation {
+            @include displayGrid(1fr 1fr, 1fr, start, start, start, start);
+
+            p {
+                text-transform: uppercase;
+                margin-bottom: 5px;
+                padding: 10px 0;
+                font-weight: 600;
+            }
+
+            & > div {
+                position: relative;
+                padding: 0 20px 0 47px;
+
+                a {
+                    font-weight: 600;
+                    font-size: clamp(1.125rem, 1.0931rem + 0.1307vw, 1.25rem);
+                }
+                
+                &::before {
+                    position: absolute;
+                    top: 40%;
+                    font-size: 23px;
+                }
+                
+            }
+            .previous-post {
+                &:before {
+                    content: "\276E";
+                    left: 0;
+                }
+            }
+            .next-post {
+                &:before {
+                    content: "\276F";
+                    right: 0;
+                }
+            }
+        }
+    }
+
+
+    .related-posts.right-part {
+        
+        margin-top: 55px;
+        width: 100%;
+
+        .widget {
+            border: 1px solid $secondary-light-color;
+            border-radius: 5px;
+            padding: 20px 25px;
+
+            &:not(:last-child) {
+                margin-bottom: 80px;
+            }
+        }
+        .widget-title {
+            text-align: left;
+            margin-bottom: 26px;
+        }
+
+        .related-posts-list {
+            @include displayFlex(column, nowrap, flex-start, flex-start, flex-start);
+          
+        
+            .related-post-item {
+                @include displayFlex(row, nowrap, flex-start, flex-start, flex-start);
+                gap: 16px;
+                padding: 20px 0;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $secondary-light-color;
+                }
+        
+                * {
+                    font-weight: 500;
+                }
+        
+                .post-thumbnail {
+                    width: 95px;
+                    height: 95px;
+                    margin-top: 8px;
+
+                    img {
+                        object-fit: cover;
+                    }
+                }
+        
+                .post-details {
+                    @include displayFlex(column, nowrap, flex-start, flex-start, flex-start);
+                    gap: 20px;
+        
+                    .post-title {
+                        max-width: 218px;
+                        overflow: hidden;
+                        a {
+                            font-size: 18px;
+                            color: $text-color;  
+                        }
+                    }
+        
+                    .more-button {
+                        position: relative;
+                        color: $primary-color;
+        
+                        &::after {
+                            position: absolute;
+                            content: "\2794";
+                            color: $primary-color;
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
