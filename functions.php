@@ -37,22 +37,71 @@ function tumo_custom_theme_setup() {
 add_action( 'after_setup_theme', 'tumo_custom_theme_setup' );
 
 
-function custom_theme_widgets_init() {
+function theme_sidebar_registration() {
     register_sidebar( array(
-        'name'          => 'Sidebar',
-        'id'            => 'sidebar-1',
-        'before_widget' => '<div class="widget %2$s">',
+        'name'          => 'Right Sidebar',
+        'id'            => 'right-sidebar',
+        'before_widget' => '<div class="widget">',
         'after_widget'  => '</div>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
 }
-add_action( 'widgets_init', 'custom_theme_widgets_init' );
+add_action( 'widgets_init', 'theme_sidebar_registration' );
 
-
+require_once get_template_directory() . '/includes/related-posts-widget.php';  
 
 
 function tumo_customize_register($wp_customize) {
+    /******* 
+    * *****  Add a section for the homepage settings */
+    $wp_customize->add_section('homepage_settings', [
+        'title' => __('Custom Homepage Settings', 'tumo'),
+        'priority' => 29,
+    ]);
+
+        // Add a setting for the book list shortcode
+        $wp_customize->add_setting('homepage_book_shortcode', [
+            'default' => '[book_list]',
+            'sanitize_callback' => 'wp_kses_post',
+        ]);
+
+        // Add a control for the shortcode input
+        $wp_customize->add_control('homepage_book_shortcode_control', [
+            'label'     => __('Book List Shortcode', 'tumo'),
+            'section'   => 'homepage_settings',
+            'settings'  => 'homepage_book_shortcode',
+            'type'      => 'textarea',
+        ]);
+        // Add a setting for the default posts per page in the homepage book list
+        $wp_customize->add_setting('homepage_books_per_page', [
+            'default' => 4,
+            'sanitize_callback' => 'absint',
+        ]);
+
+        // Add a control for the posts per page input
+        $wp_customize->add_control('homepage_books_per_page_control', [
+            'label'     => __('Number of Books', 'tumo'),
+            'section'   => 'homepage_settings',
+            'settings'  => 'homepage_books_per_page',
+            'type'      => 'number',
+        ]);
+
+
+        // Add a setting for the "Read More" URL
+        $wp_customize->add_setting('homepage_books_read_more_url', [
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ]);
+
+        // Add a control for the "Read More" URL input
+        $wp_customize->add_control('homepage_books_read_more_url_control', [
+            'label'     => __('Books Page URL', 'tumo'),
+            'section'   => 'homepage_settings',
+            'settings'  => 'homepage_books_read_more_url',
+            'type'      => 'url',
+        ]);
+
     /******* 
     * ***** Section for Header Settings */
     $wp_customize->add_section('header_settings', array(
@@ -76,7 +125,7 @@ function tumo_customize_register($wp_customize) {
     * ***** Section for Footer Settings */
     $wp_customize->add_section('footer_settings', array(
         'title'    => __('Footer Settings', 'tumo'),
-        'priority' => 40,
+        'priority' => 31,
     ));
 
         // Footer Background Color
@@ -95,7 +144,7 @@ function tumo_customize_register($wp_customize) {
     * ***** Section for Social Icons Settings */
     $wp_customize->add_section('social_icons_settings', array(
         'title'    => __('Social Icons Settings', 'tumo'),
-        'priority' => 50,
+        'priority' => 32,
     ));
 
         // Social Icons Background Color
@@ -114,7 +163,7 @@ function tumo_customize_register($wp_customize) {
     * ***** Section for Buttons Settings */
     $wp_customize->add_section('buttons_settings', array(
         'title'    => __('Buttons Settings', 'tumo'),
-        'priority' => 60,
+        'priority' => 33,
     ));
 
         // Buttons Background Color
@@ -139,7 +188,7 @@ function tumo_customize_register($wp_customize) {
             'label'    => __('Buttons Text Color', 'tumo'),
             'section'  => 'buttons_settings',
             'settings' => 'buttons_text_color',
-        )));
+        )));  
 }
 add_action('customize_register', 'tumo_customize_register');
 
