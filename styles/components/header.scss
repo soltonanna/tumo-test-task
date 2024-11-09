@@ -1,6 +1,11 @@
 header#header {
-    @include displayFlex(row, nowrap, center, space-between, center);
-    margin: 60px auto 100px;
+
+    .container {
+        @include displayFlex(row, nowrap, center, space-between, center);
+        //margin: 60px auto 100px;
+        margin: 0 auto 40px;
+        padding: 60px 66px;
+    }
 
     .logo {
         width: 162px;

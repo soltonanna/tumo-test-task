@@ -1,23 +1,31 @@
 <?php
 function register_theme_assets() {
-    // Define the Customizer styles
+    // Define the Customize styles
     $custom_css = "
-        .header {
+        .header,
+        .header .container {
             background-color: " . esc_attr(get_theme_mod('header_bg_color', '#ffffff')) . ";
         }
-        .footer {
+        .footer,
+        .footer .container {
             background-color: " . esc_attr(get_theme_mod('footer_bg_color', '#F9F9F9')) . ";
         }
         .social li {
-            border: 1px solid " . esc_attr(get_theme_mod('social_icons_bg_color', '#4CE0D7')) . ";
-            background-color: " . esc_attr(get_theme_mod('social_icons_bg_color', '#4CE0D7')) . ";
+            border: 1px solid " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
+            background-color: " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
         }
         .btn,
         .btn * {
-            background-color: " . esc_attr(get_theme_mod('buttons_bg_color', '#4CE0D7')) . ";
-            border: 2px solid " . esc_attr(get_theme_mod('buttons_bg_color', '#4CE0D7')) . ";
-            color: " . esc_attr(get_theme_mod('buttons_text_color', '#000000')) . ";
-        }            
+            background-color: " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
+            border: 2px solid " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
+            color: " . esc_attr(get_theme_mod('text_color', '#000000')) . ";
+        }
+        .primary-text-color {
+            color: " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
+        } 
+        .secondary-text-color {
+            color: " . esc_attr(get_theme_mod('secondary_color', '#BCBCBC')) . ";
+        }               
     ";
 
     // Register styles
@@ -28,7 +36,7 @@ function register_theme_assets() {
     wp_enqueue_style('main-styles');
     wp_enqueue_style('font-awesome');
 
-    // Add inline CSS for Customizer settings
+    // Add inline CSS for Customize settings
     wp_add_inline_style('main-styles', $custom_css);
 
     // Register and enqueue scripts

@@ -1,0 +1,30 @@
+.latest-post {
+    height: 567px;
+    padding: 0 20px;
+    margin-bottom: 100px;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply; 
+    @include displayFlex(column, nowrap, flex-start, center, flex-start);
+
+    * {
+        color: $white-color;
+        text-align: left;
+    }
+
+    .overlay {
+        @include displayFlex(column, nowrap, space-between, space-between, stretch);
+        gap: 20px;
+        max-width: 47%;
+        border: 1px dotted green;
+
+        .post-date {
+
+        }
+        .post-title {
+            font-size: clamp(1.875rem, 1.636rem + 0.9804vw, 2.8125rem);
+        }
+    }
+}
