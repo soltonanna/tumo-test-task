@@ -2,13 +2,25 @@ header#header {
 
     .container {
         @include displayFlex(row, nowrap, center, space-between, center);
-        //margin: 60px auto 100px;
-        margin: 0 auto;
-        padding: 60px 66px;
+        margin: 60px auto;
+        padding: 11px 86px;
+
+        @include respond(tablet) { 
+            margin: 30px auto;
+            padding: 11px 43px;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
     }
 
     .logo {
         width: 162px;
         height: 68px;
+
+        @include respond(phone) {
+            margin-bottom: 20px;
+        }
     }
 }

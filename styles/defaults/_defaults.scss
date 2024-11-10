@@ -10,6 +10,7 @@
 
 body {
     font-family: 'Poppins', sans-serif; 
+    background-color: #ffffff;
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -24,24 +25,32 @@ a {
 
 .big-container {
     max-width: $container_big_sz;
-    min-width: $container_big_sz;
     margin: auto;
+
+    @include respond(tablet) { 
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .container {
     width: 80vw;
     max-width: $container_sz;
-    min-width: $container_sz;
     margin: auto;
     padding: 0 66px;
     background-color: $white-color;
+    
 
-    // 769px
-    @include respond(tab-port) { 
-        padding: 34px 40px;
+    @include respond(tab-port) {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        padding: 0 33px;
     }
 
-    // 376px
+    @include respond(tablet) { 
+    }
+
     @include respond(phone) { 
         padding: 20px;
     } 
@@ -49,6 +58,10 @@ a {
 
 main#content {
     padding: 40px 66px 100px;
+
+    @include respond(tablet) { 
+        padding: 20px 33px 50px;
+    }
 }
 
 img {
@@ -64,6 +77,7 @@ img {
 
 .homepage-books-list {
     text-align: center;
+    padding-bottom: 20px;
 
     .pagination {
         display: none;

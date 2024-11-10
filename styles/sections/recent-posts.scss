@@ -1,11 +1,22 @@
 .recent-posts {
     margin-bottom: 101px;
 
+    @include respond(tablet) { 
+        margin-bottom: 50px;
+    }
+
     .recent-posts-list {
         @include displayGrid(1fr 1fr 1fr, 1fr, start, start, start, stretch);
         gap: 24px;
         width: 100%;
         margin-top: 49px;
+
+        @include respond(tablet) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
     }
 }
 
@@ -19,6 +30,14 @@
             margin-bottom: 20px;
             height: 254px;
             object-fit: cover;
+
+            @include respond(tablet) {
+                height: 300px;
+            }
+            @include respond(phone) {
+                grid-template-columns: 1fr;
+                height: 500px;
+            }
         }
         .post-date {
             margin-bottom: 15px;

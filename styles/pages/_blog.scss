@@ -5,12 +5,28 @@
         column-gap: 24px;
         margin-bottom: 50px;
   
+        @include respond(tablet) { 
+            row-gap: 25px;
+            column-gap: 12px;
+        }
+
         &.five-posts {
             grid-template-columns: repeat(3, 1fr);
+
+            @include respond(tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include respond(phone) {
+                grid-template-columns: 1fr;
+            }
 
             article:nth-child(1) {
                 grid-column: span 2;
                 @include displayFlex(row, nowrap, center, flex-start, stretch);
+
+                @include respond(phone) {
+                    grid-column: span 1;
+                }
 
                 a {
                     @include displayGrid(1fr 1fr, 1fr, center, center, center, center);
@@ -42,8 +58,25 @@
         &.six-posts {
             grid-template-columns: repeat(3, 1fr);
     
+            @include respond(tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include respond(phone) {
+                grid-template-columns: 1fr;
+            }
+
             article {
                 grid-column: span 1;
+            }
+        }
+
+        article {
+            a {
+                img {
+                    @include respond(tablet) {
+                        height: 170px;
+                    }
+                }
             }
         }
     }

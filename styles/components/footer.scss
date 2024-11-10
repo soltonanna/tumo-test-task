@@ -5,6 +5,10 @@
         @include displayFlex(column, nowrap, space-between, space-between, stretch);
         background-color: $footer-bg-color;
         padding: 30px 86px;
+
+        @include respond(tablet) { 
+            padding: 20px 43px;
+        }
     }
 
     & > div {
@@ -16,9 +20,30 @@
         border-bottom: 1px solid $secondary-light-color;
         padding: 30px 0;
 
+        @include respond(tablet) { 
+            padding: 20px 0;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
+        .logo {
+            width: 162px;
+            height: 68px;
+    
+            @include respond(phone) {
+                margin-bottom: 40px;
+            }
+        }
+
         .social {
             @include displayFlex(row, nowrap, center, space-between, center);
             gap: 38px;
+
+            @include respond(phone) {
+                flex-direction: column;
+            }
 
             ul {
                 @include displayFlex(row, nowrap, flex-start, flex-start, center);

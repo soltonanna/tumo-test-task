@@ -7,12 +7,12 @@ nav {
             li {
                 &:not(.btn) {
                     a {
-                        color: $black-color;
+                        //color: $black-color;
                         transition: all 0.5s ease;
     
-                        &:hover {
-                            color: $primary-color;
-                        }
+                        // &:hover {
+                        //     color: $primary-color;
+                        // }
                     }
                 }
             

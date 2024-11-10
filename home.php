@@ -5,9 +5,7 @@ get_header(); ?>
 
     <?php
     $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
     $posts_per_page = ($paged === 1) ? 5 : 6;
-
     $args = [
         'post_type'      => 'post',
         'posts_per_page' => $posts_per_page,

@@ -2,6 +2,11 @@
     @include displayGrid(2.2fr 1fr, 1fr, start, start, start, start);
     gap: 24px;
     width: 100%;
+    padding-top: 53px;
+
+    @include respond(tablet) {
+        grid-template-columns: 1fr;
+    }
 
     .content-wrap.left-part {
         .top-meta-info {
@@ -61,6 +66,10 @@
         .post-navigation {
             @include displayGrid(1fr 1fr, 1fr, start, start, start, start);
 
+            @include respond(tablet) {
+                grid-template-columns: 1fr;
+            }
+            
             p {
                 text-transform: uppercase;
                 margin-bottom: 5px;
