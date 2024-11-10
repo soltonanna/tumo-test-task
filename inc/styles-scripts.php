@@ -33,7 +33,7 @@ function register_theme_assets() {
             color: " . esc_attr(get_theme_mod('text_color', '#262626')) . ";
         }
 
-        .menu-items li a:hover,
+        .menu-items li:not(.btn) a:hover,
         .content-wrp a:hover,
         .single-page .post-navigation > div:before {
             color: " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";

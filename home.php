@@ -19,11 +19,24 @@ get_header(); ?>
 
                 <article id="post-<?php the_ID(); ?>" <?php post_class('post-item'); ?>>
                     <a href="<?php the_permalink(); ?>">
+                        
                         <?php the_post_thumbnail('full'); ?>
+                        
                         <div>
-                            <p class="post-date secondary-text-color">
-                                <?php echo get_the_date(); ?>
-                            </p>
+                            <div class="top-meta-info">
+                                <div class="post-date secondary-text-color">
+                                    <?php echo get_the_date(); ?>
+                                </div>
+
+                                <div class="reading-time secondary-text-color">
+                                    <?php
+                                        $content = get_the_content();
+                                        $word_count = str_word_count(strip_tags($content));
+                                        $reading_time = ceil($word_count / 200); 
+                                        echo $reading_time . ' min read';
+                                    ?>
+                                </div>
+                            </div>
                             <p><?php //the_excerpt(); ?></p>
                             <h3 class="post-title"><?php the_title(); ?></h3>
                         </div>

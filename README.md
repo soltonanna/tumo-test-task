@@ -1,5 +1,3 @@
-<img src="screenshot.png" alt="test task for TUMO" /> <br/>
-
 # Custom WordPress Theme
 
 This project is a custom WordPress theme tailored for a blog-focused website. The theme includes custom homepage and blog page layouts, single post templates, navigation, and widget functionality for recent posts. Additionally, the theme offers customization options in the WordPress Customizer, allowing users to adjust theme colors and homepage settings.
@@ -41,3 +39,12 @@ This theme was built using PHP, SCSS, and WordPress functions, and follows WordP
 - **inc/related-posts-widget.php**: Custom widgets settings.
 - **inc/customizer-settings.php**: Custom Customizer settings.
 - **style.scss / style.css**: Main styles for the theme, with SCSS used for efficient styling and layout control.
+
+## Screenshots
+<img src="/images/screenshots/AdminPosts.png" alt="Posts" /> <br/>
+<img src="/images/screenshots/AdminWidgets.png" alt="Widgets" /> <br/>
+<img src="/images/screenshots/AdminCustomzie.png" alt="Customize" /> <br/><br/>
+
+<img src="/images/screenshots/Homepage.jpg" alt="Homepage" /> <br/>
+<img src="/images/screenshots/Blogpage.jpg" alt="Blog Page" /> <br/>
+<img src="/images/screenshots/SinglePostPage.jpg" alt="Single Post Page" /> <br/>
