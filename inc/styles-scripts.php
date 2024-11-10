@@ -15,7 +15,8 @@ function register_theme_assets() {
             background-color: " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
         }
         .btn,
-        .btn * {
+        .btn *,
+        .cat-item .cat-count {
             background-color: " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
             border: 2px solid " . esc_attr(get_theme_mod('primary_color', '#4CE0D7')) . ";
             color: " . esc_attr(get_theme_mod('text_color', '#000000')) . ";

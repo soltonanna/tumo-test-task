@@ -53,7 +53,11 @@ function theme_sidebar_registration() {
 add_action( 'widgets_init', 'theme_sidebar_registration' );
 
 
-
+function custom_category_widget_count($links) {
+    $links = preg_replace('/\((\d+)\)/', '<span class="cat-count">$1</span>', $links);
+    return $links;
+}
+add_filter('wp_list_categories', 'custom_category_widget_count');
 
 
 

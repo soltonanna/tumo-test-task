@@ -128,9 +128,30 @@
             margin-bottom: 26px;
         }
 
+        .cat-item {
+            @include displayFlex(row, nowrap, center, space-between, center);
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid $secondary-light-color;
+            }
+            a {
+                font-weight: 500;
+            }
+            .cat-count {
+                padding: 21.5px 16px;
+                line-height: 0;
+                border-radius: 50%;
+                font-weight: 600;
+
+                &:hover {
+                    box-shadow: 0 7px 15px rgb(207 207 207 / 80%);
+                }
+            }
+        }
         .related-posts-list {
             @include displayFlex(column, nowrap, flex-start, flex-start, flex-start);
-          
         
             .related-post-item {
                 @include displayFlex(row, nowrap, flex-start, flex-start, flex-start);
