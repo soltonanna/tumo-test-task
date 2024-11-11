@@ -45,6 +45,6 @@ This theme was built using PHP, SCSS, and WordPress functions, and follows WordP
 <img src="/images/screenshots/AdminWidgets.png" alt="Widgets" /> <br/>
 <img src="/images/screenshots/AdminCustomzie.png" alt="Customize" /> <br/><br/>
 
-<img src="/images/screenshots/Homepage.jpg" alt="Homepage" /> <br/>
+<img src="/images/screenshots/HomepageNew.jpg" alt="Homepage" /> <br/>
 <img src="/images/screenshots/Blogpage.jpg" alt="Blog Page" /> <br/>
 <img src="/images/screenshots/SinglePostPageNew.jpg" alt="Single Post Page" /> <br/>
