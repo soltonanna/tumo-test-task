@@ -66,22 +66,23 @@ function tumo_customize_register($wp_customize) {
         'settings' => 'footer_bg_color',
     ]));
 
-    // Custom Homepage Settings Section (separate section as requested)
+    // Custom Homepage Settings Section
     $wp_customize->add_section('homepage_settings', [
         'title' => __('Custom Homepage Settings', 'tumo'),
         'priority' => 29,
     ]);
 
+    // Book List Checkbox Setting
     $wp_customize->add_setting('homepage_book_shortcode', [
-        'default' => '[book_list]',
-        'sanitize_callback' => 'wp_kses_post',
+        'default' => false,
+        'sanitize_callback' => 'wp_validate_boolean',
     ]);
 
     $wp_customize->add_control('homepage_book_shortcode_control', [
-        'label'    => __('Book List Shortcode', 'tumo'),
+        'label'    => __('Display Book List', 'tumo'),
         'section'  => 'homepage_settings',
         'settings' => 'homepage_book_shortcode',
-        'type'     => 'textarea',
+        'type'     => 'checkbox',
     ]);
 
     $wp_customize->add_setting('homepage_books_per_page', [
