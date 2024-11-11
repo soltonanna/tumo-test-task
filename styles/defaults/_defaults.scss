@@ -26,6 +26,11 @@ a {
 .big-container {
     max-width: $container_big_sz;
     margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
 
     @include respond(tablet) { 
         width: 100%;
